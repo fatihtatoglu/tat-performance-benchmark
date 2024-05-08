@@ -6,7 +6,7 @@
     {
         public static void Main()
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 98; i++)
             {
                 ulong result = Fibonacci(i);
                 Console.Write("{0}: {1}\r\n", i, result);

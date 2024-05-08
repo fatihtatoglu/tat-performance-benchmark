@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	for i := 0; i <= 100; i++ {
+	for i := 0; i <= 98; i++ {
 		result := Fibonacci(i)
 		fmt.Printf("%d: %d\r\n", i, result)
 	}

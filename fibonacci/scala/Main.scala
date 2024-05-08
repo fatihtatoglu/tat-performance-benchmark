@@ -1,6 +1,6 @@
 object Main {
     def main(args: Array[String]): Unit = {
-        for (i <- 0 to 100) {
+        for (i <- 0 to 98) {
             val result = fibonacci(i)
             printf("%d: %d\r\n", i, result)
         }

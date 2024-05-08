@@ -1,9 +1,5 @@
-FROM openjdk:alpine
-
-WORKDIR /usr/src/app
-
+FROM openjdk:alpine AS build
+WORKDIR /app
 COPY . .
-
 RUN javac Main.java
-
 CMD ["java", "Main"]

@@ -11,7 +11,7 @@ fn fibonacci(n: i32) -> u128 {
 }
 
 fn main() {
-    for i in 1..101 {
+    for i in 1..99 {
         let result = fibonacci(i);
         println!("{}: {}", i, result);
     }

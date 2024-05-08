@@ -1,7 +1,4 @@
-FROM lua:latest
-
+FROM esolang/lua:latest
 WORKDIR /app
-
 COPY main.lua .
-
 CMD ["lua", "main.lua"]

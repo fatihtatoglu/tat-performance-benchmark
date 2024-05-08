@@ -1,4 +1,4 @@
-for $i (0 .. 100) {
+for $i (0 .. 98) {
     $result = fibonacci($i);
     print $i, ": ", $result, "\r\n";
 }

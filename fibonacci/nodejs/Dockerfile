@@ -1,7 +1,4 @@
 FROM node:alpine
-
-WORKDIR /usr/src/app
-
+WORKDIR /app
 COPY . .
-
 CMD [ "node", "main.js" ]

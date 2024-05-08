@@ -7,7 +7,7 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 
-limit = range(101)
+limit = range(99)
 
 for i in limit:
     result = fibonacci(i)

@@ -6,7 +6,7 @@ unsigned long fibonacci(int n);
 
 int main()
 {
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 98; i++)
     {
         unsigned long result = fibonacci(i);
         printf("%d: %ld\r\n", i, result);

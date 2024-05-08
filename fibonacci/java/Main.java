@@ -3,7 +3,7 @@ import java.math.BigInteger;
 public class Main {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 98; i++) {
             BigInteger result = Fibonacci(i);
             System.out.printf("%d: %d%n", i, result);
         }

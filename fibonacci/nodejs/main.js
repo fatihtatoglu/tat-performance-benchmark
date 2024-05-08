@@ -1,5 +1,5 @@
 (function () {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i <= 98; i++) {
         var result = fibonacci(i)
         console.log(i, ":", result);
     }
