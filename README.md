@@ -27,3 +27,4 @@ Selected from [Stackoverflow 2023 Developer Survey](https://survey.stackoverflow
 
 - [Collect Docker metrics with Prometheus](https://docs.docker.com/config/daemon/prometheus/)
 - [Docker Container Monitoring with cAdvisor, Prometheus, and Grafana using Docker Compose](https://medium.com/@sohammohite/docker-container-monitoring-with-cadvisor-prometheus-and-grafana-using-docker-compose-b47ec78efbc)
+- [Measure execution time of docker container](https://stackoverflow.com/questions/51650405/measure-execution-time-of-docker-container)
