@@ -1,6 +1,9 @@
-name: tat-perf-bench-fibonacci
+name: tat-perf-bench
 
 services:
+#===============#
+# Monitoring    #
+#===============#
   cadvisor:
     container_name: cadvisor
     image: gcr.io/cadvisor/cadvisor:latest
@@ -16,7 +19,6 @@ services:
     privileged: true
     devices: 
       - "/dev/kmsg"
-
   prometheus:
     container_name: prometheus
     image: prom/prometheus:latest
@@ -24,11 +26,10 @@ services:
     ports:
       - "9090:9090"
     volumes: 
-      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+      - "./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml"
     privileged: true
     depends_on:
       - cadvisor
-
   grafana:
     container_name: grafana
     image: grafana/grafana:latest
@@ -40,73 +41,82 @@ services:
       - DS_PROMETHEUS=prometheus
     volumes: 
       - "grafana-data:/var/lib/grafana"
-      - "./datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml"
-      - "./dashboard.json:/var/lib/grafana/dashboards/dashboard.json"
-      - "./default.yaml:/etc/grafana/provisioning/dashboards/default.yaml"
+      - "./monitoring/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml"
+      - "./monitoring/dashboard.json:/var/lib/grafana/dashboards/dashboard.json"
+      - "./monitoring/default.yaml:/etc/grafana/provisioning/dashboards/default.yaml"
     privileged: true
     depends_on:
       - prometheus
+#===============#
+# Monitoring    #
+#===============#
 
-  c:
+#===============#
+# Fibonacci     #
+#===============#
+  fibonacci-c:
     build: ./fibonacci/c
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  cpp:
+  fibonacci-cpp:
     build: ./fibonacci/cpp
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  csharp:
+  fibonacci-csharp:
     build: ./fibonacci/csharp
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  go:
+  fibonacci-go:
     build: ./fibonacci/go
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  java:
+  fibonacci-java:
     build: ./fibonacci/java
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  lua:
+  fibonacci-lua:
     build: ./fibonacci/lua
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  node:
+  fibonacci-node:
     build: ./fibonacci/nodejs
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  perl:
+  fibonacci-perl:
     build: ./fibonacci/perl
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  python:
+  fibonacci-python:
     build: ./fibonacci/python
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  ruby:
+  fibonacci-ruby:
     build: ./fibonacci/ruby
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  rust:
+  fibonacci-rust:
     build: ./fibonacci/rust
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
-  scala:
+  fibonacci-scala:
     build: ./fibonacci/scala
-    cpus: "1"
+    cpus: "2"
     mem_reservation: "1G"
     mem_limit: "4G"
+#===============#
+# Fibonacci     #
+#===============#
 
 volumes:
   grafana-data:
