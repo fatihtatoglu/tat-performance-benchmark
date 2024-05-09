@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # Rust
 [tT]arget/
+
+# VsCode
+.vscode/
