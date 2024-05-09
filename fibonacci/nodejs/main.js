@@ -1,7 +1,10 @@
 (function () {
-    for (let i = 0; i <= 98; i++) {
+    for (let i = 0; i <= 50; i++) {
         var result = fibonacci(i)
-        console.log(i, ":", result);
+
+        var epoch = Date.now();
+
+        console.log(i, ":", result, "(", epoch, ")");
     }
 
     function fibonacci(n) {

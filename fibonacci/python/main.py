@@ -1,3 +1,6 @@
+import time
+
+
 def fibonacci(n):
     if n == 0:
         return 0
@@ -7,8 +10,11 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 
-limit = range(99)
+limit = range(51)
 
 for i in limit:
     result = fibonacci(i)
-    print(i, ":", result)
+
+    epoch = time.time()
+
+    print(i, ":", result, "(", epoch, ")")

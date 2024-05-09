@@ -10,7 +10,10 @@ local function fibonacci(n)
     return fibonacci(n - 1) + fibonacci(n - 2)
 end
 
-for i = 1, 98, 1 do
+for i = 1, 50, 1 do
     local result = fibonacci(i)
-    print(i, ": ", result)
+
+    local epoch = os.time(os.date("!*t"))
+
+    print(i, ": ", result, "(",epoch,")")
 end

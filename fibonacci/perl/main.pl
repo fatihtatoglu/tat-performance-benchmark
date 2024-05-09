@@ -1,6 +1,9 @@
-for $i (0 .. 98) {
+for $i (0 .. 50) {
     $result = fibonacci($i);
-    print $i, ": ", $result, "\r\n";
+
+    my $epoch = time;	
+
+    print $i, ": ", $result, "(",$epoch,")\r\n";
 }
 
 sub fibonacci{

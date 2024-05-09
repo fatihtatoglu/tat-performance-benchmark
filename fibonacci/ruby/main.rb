@@ -10,7 +10,7 @@ def fibonacci(n)
   return fibonacci(n-1) + fibonacci(n-2);
 end
 
-for i in 1..98
+for i in 1..50
   result = fibonacci(i)
-  puts "#{i}: #{result}"
+  puts "#{i}: #{result} (#{Time.now.to_i})"
 end

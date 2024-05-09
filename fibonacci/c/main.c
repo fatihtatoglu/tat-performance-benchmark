@@ -1,13 +1,18 @@
 #include <stdio.h>
+#include <sys/time.h>
 
 unsigned long fibonacci(int n);
 
 int main()
 {
-    for (int i = 0; i <= 98; i++)
+    for (int i = 0; i <= 50; i++)
     {
         unsigned long result = fibonacci(i);
-        printf("%d: %ld\r\n", i, result);
+
+        struct timeval currentTime;
+        gettimeofday(&currentTime, NULL);
+
+        printf("%d: %ld (%ld)\r\n", i, result, currentTime.tv_sec);
     }
 
     return 0;

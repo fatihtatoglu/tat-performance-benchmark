@@ -3,9 +3,12 @@ import java.math.BigInteger;
 public class Main {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 98; i++) {
+        for (int i = 0; i <= 50; i++) {
             BigInteger result = Fibonacci(i);
-            System.out.printf("%d: %d%n", i, result);
+
+            long epoch = System.currentTimeMillis()/1000;
+
+            System.out.printf("%d: %d (%d)\r\n", i, result, epoch);
         }
     }
 

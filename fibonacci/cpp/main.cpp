@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 
 using namespace std;
 
@@ -6,10 +7,14 @@ unsigned long fibonacci(int n);
 
 int main()
 {
-    for (int i = 0; i < 98; i++)
+    for (int i = 0; i <= 50; i++)
     {
         unsigned long result = fibonacci(i);
-        printf("%d: %ld\r\n", i, result);
+
+        auto now = std::chrono::system_clock::now();
+        auto epoch = std::chrono::duration_cast<std::chrono::seconds>(now.time_since_epoch()).count();
+
+        printf("%d: %ld (%ld)\r\n", i, result, epoch);
     }
 }
 
