@@ -7,5 +7,6 @@ RUN g++ -o app main.cpp
 
 FROM alpine:latest
 WORKDIR /app
+RUN apk --update add libstdc++
 COPY --from=build /app/app .
 CMD ["./app"]
