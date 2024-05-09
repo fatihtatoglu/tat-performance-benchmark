@@ -32,3 +32,18 @@ Selected from [Stackoverflow 2023 Developer Survey](https://survey.stackoverflow
 ## Tests
 
 - Fibonacci with Recursive calculation
+
+## Execution
+
+```bash
+docker compose build
+```
+
+```bash
+chmod +x run.sh
+./run.sh
+```
+
+## Monitoring
+
+[Click to Open Grafana Dashboard](http://localhost:3000/d/ee75b6b8-f1c6-4ef1-9d39-fe50cc55a274/docker-monitoring-test?orgId=1&refresh=10s&from=now-15m&to=now)
