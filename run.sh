@@ -4,7 +4,7 @@ docker compose up -d cadvisor
 docker compose up -d prometheus
 docker compose up -d grafana
 
-sleep 10
+sleep 60
 
 docker compose up -d fibonacci-c
 
@@ -14,7 +14,7 @@ do
         docker compose up -d fibonacci-cpp
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -23,7 +23,7 @@ do
         docker compose up -d fibonacci-csharp
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -32,7 +32,7 @@ do
         docker compose up -d fibonacci-go
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -41,7 +41,7 @@ do
         docker compose up -d fibonacci-java
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -50,7 +50,7 @@ do
         docker compose up -d fibonacci-lua
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -59,7 +59,7 @@ do
         docker compose up -d fibonacci-node
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -68,7 +68,7 @@ do
         docker compose up -d fibonacci-perl
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -77,7 +77,7 @@ do
         docker compose up -d fibonacci-python
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -86,7 +86,7 @@ do
         docker compose up -d fibonacci-ruby
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -95,7 +95,7 @@ do
         docker compose up -d fibonacci-rust
         break
     fi
-    sleep 10
+    sleep 60
 done
 
 while :
@@ -104,5 +104,5 @@ do
         docker compose up -d fibonacci-scala
         break
     fi
-    sleep 10
+    sleep 60
 done
