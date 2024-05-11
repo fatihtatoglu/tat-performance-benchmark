@@ -40,7 +40,7 @@ Without using ChatGPT or any other AI assistant (by using Google Search to find 
 
 The selected problem should take time to find the solution and use a high CPU and enough memory resources. Otherwise, measuring performance wasn't meaningful. So, I decided to select a mathematical problem to solve by code.
 
-In the beginning, I selected factorial calculation, nevertheless overflowing the 64-bit integer's limit blocked the implementations. Then I selected the calculation of the [Fibonacci Sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence). It takes time and is also suitable for recursive implementation. To make the challenge a little bit harder, I preferred the recursive implementation of the sequence.
+In the beginning, I selected factorial calculation, but overflowing the 64-bit integer's limit blocked the implementations. Then I selected the calculation of the [Fibonacci Sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence). It takes time and is also suitable for recursive implementation. To make the challenge a little bit harder, I preferred the recursive implementation of the sequence.
 
 By the way, the Fibonacci sequence is one of the challenges. I will add some additional challenges, such as string operations, and different mathematical calculations.
 
@@ -64,9 +64,9 @@ I have used the multi-stage image build to prevent additional resource usage, fo
 
 ## Monitoring Resources
 
-After impleting the applications, the correct measurement is the key point of the project. As I know `docker stats` doesn't provide enough information. So, I used cAdvisor, Prometheus, and Grafana.
+After implementing the applications, the correct measurement is the key point of the project. As I know `docker stats` doesn't provide enough information. So, I used cAdvisor, Prometheus, and Grafana.
 
-The implementation was so easy, but there was some tricky points, like selecting correct metrics and connecting the tools to each others. The helpful resources is below.
+The implementation was easy, but there were some tricky points, like selecting the correct metrics and connecting the tools. The helpful resources are below.
 
 - [Collect Docker metrics with Prometheus](https://docs.docker.com/config/daemon/prometheus/)
 - [Docker Container Monitoring with cAdvisor, Prometheus, and Grafana using Docker Compose](https://medium.com/@sohammohite/docker-container-monitoring-with-cadvisor-prometheus-and-grafana-using-docker-compose-b47ec78efbc)
@@ -107,7 +107,7 @@ With the above command general information and application execution logs are ex
 
 A long story short, I was shocked at the first sight. Then, I decided to share those measurements with other developers and curious people without comments. Maybe, my testing environment was wrong or the selected problem wasn't suitable for this purpose.
 
-According to the contributors' comments, I should evaluate the results. I need your help to complete the evaluation step.
+According to the contributors' comments, I should evaluate the results. I am asking your help to complete the evaluation step.
 
 - Validate the implementation of the applications.
   - Validate the compiler-level optimizations.
@@ -122,7 +122,7 @@ According to the contributors' comments, I should evaluate the results. I need y
 
 ## Contribution
 
-Please share your ideas on repository issues. Moreover, you can share your results (Grafana CSV exports and out.json file) over the issue template if you want.
+Please share your ideas on repository issues. Moreover, you can share your results (Grafana JSON exports and out.json file) over the issue template.
 
 ### Exporting Data From Garafana
 
