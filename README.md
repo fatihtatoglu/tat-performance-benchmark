@@ -72,6 +72,12 @@ The implementation was so easy, but there was some tricky points, like selecting
 
 ## Execution
 
+### Prerequisites
+
+- Docker Engine (I tested 36.1.2)
+- Docker Compose v2.27.0 or newer
+- Go 1.18 or higher (for reporting)
+
 ```bash
 docker compose build
 ```
@@ -102,5 +108,44 @@ A long story short, I was shocked at the first sight. Then, I decided to share t
 According to the contributors' comments, I should evaluate the results. I need your help to complete the evaluation step.
 
 - Validate the implementation of the applications.
+  - Validate the compiler-level optimizations.
 - Validate the test environments.
+  - Limiting CPU, Memory, or other resources.
+  - Validate the isolation is done.
 - Validate the metric measurements.
+  - CPU
+  - Memory
+  - Execution Time
+  - Step level throughput
+
+## Contribution
+
+Please share your ideas on repository issues. Moreover, you can share your results (Grafana CSV exports and out.json file) over the issue template if you want.
+
+### Exporting Data From Garafana
+
+Please track these steps after completing all scenarios.
+
+- Select **Docker Monitoring Test** dashboard.
+- From dashboard select **Last 24 Hours**
+- Open the menu of the **CPU Usage** Chart.
+- Select **Inspect**.
+- Select **JSON** and (from ***Select source*** list) **Panel data**.
+- Copy and paste that JSON.
+- Repeat the same steps for the **Memory Usage** Chart.
+
+For **CPU Usage** data, name the file **grafana-cpu.json**, and for **Memory Usage** data, name the file **grafana-memory.json**.
+
+### Docker Logs Export
+
+Please track these steps after completing all scenarios.
+
+- Execute the following code.
+
+```bash
+go run ./reporting/main.go > out.json
+```
+
+- out.json contains all related data and application logs.
+
+After exporting Grafana and Log data, please create an issue and upload those files (out.json, grafana-cpu.json, grafana-memory.json).
