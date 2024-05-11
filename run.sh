@@ -47,33 +47,17 @@ done
 while :
 do
     if docker compose ps -a | grep -q "fibonacci-java.*Exit"; then
-        docker compose up -d fibonacci-lua
-        break
-    fi
-    sleep 60
-done
-
-while :
-do
-    if docker compose ps -a | grep -q "fibonacci-lua.*Exit"; then
         docker compose up -d fibonacci-node
         break
     fi
     sleep 60
 done
 
-while :
-do
-    if docker compose ps -a | grep -q "fibonacci-node.*Exit"; then
-        docker compose up -d fibonacci-perl
-        break
-    fi
-    sleep 60
-done
+
 
 while :
 do
-    if docker compose ps -a | grep -q "fibonacci-perl.*Exit"; then
+    if docker compose ps -a | grep -q "fibonacci-node.*Exit"; then
         docker compose up -d fibonacci-python
         break
     fi
@@ -102,6 +86,24 @@ while :
 do
     if docker compose ps -a | grep -q "fibonacci-rust.*Exit"; then
         docker compose up -d fibonacci-scala
+        break
+    fi
+    sleep 60
+done
+
+while :
+do
+    if docker compose ps -a | grep -q "fibonacci-scala.*Exit"; then
+        docker compose up -d fibonacci-lua
+        break
+    fi
+    sleep 60
+done
+
+while :
+do
+    if docker compose ps -a | grep -q "fibonacci-lua.*Exit"; then
+        docker compose up -d fibonacci-perl
         break
     fi
     sleep 60

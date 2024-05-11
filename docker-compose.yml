@@ -57,63 +57,87 @@ services:
   fibonacci-c:
     build: ./fibonacci/c
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-cpp:
     build: ./fibonacci/cpp
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-csharp:
     build: ./fibonacci/csharp
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-go:
     build: ./fibonacci/go
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-java:
     build: ./fibonacci/java
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-lua:
     build: ./fibonacci/lua
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-node:
     build: ./fibonacci/nodejs
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-perl:
     build: ./fibonacci/perl
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-python:
     build: ./fibonacci/python
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-ruby:
     build: ./fibonacci/ruby
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-rust:
     build: ./fibonacci/rust
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
   fibonacci-scala:
     build: ./fibonacci/scala
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
 #===============#
 # Fibonacci     #
 #===============#
