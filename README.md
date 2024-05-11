@@ -52,8 +52,10 @@ To be fair while measuring the performance of the programming languages, providi
   fibonacci-c:
     build: ./fibonacci/c
     cpus: "2"
-    mem_reservation: "1G"
-    mem_limit: "4G"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "2G"
+    mem_limit: "2G"
 ```
 
 On the other hand, isolating the environment cannot be enough many times. The operation systems also use the resources. At this point, Alpine Linux comes to my rescue. Implementing Dockerfiles from the Alpine-based images reduced unnecessary resource usage.
