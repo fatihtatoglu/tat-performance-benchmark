@@ -20,7 +20,7 @@ type HuffmanNode struct {
 }
 
 func main() {
-	for i := 1; i <= 5; i++ {
+	for i := 1; i <= 6; i++ {
 		bookFilename := fmt.Sprintf("book%d.txt", i)
 		freqFilename := fmt.Sprintf("book%d.freq", i)
 		codeFilename := fmt.Sprintf("book%d.code", i)
