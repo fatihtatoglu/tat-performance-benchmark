@@ -7,6 +7,9 @@ services:
   cadvisor:
     container_name: cadvisor
     image: gcr.io/cadvisor/cadvisor:latest
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "0,1"
     network_mode: "host"
     ports:
       - "8080:8080"
@@ -22,6 +25,9 @@ services:
   prometheus:
     container_name: prometheus
     image: prom/prometheus:latest
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "0,1"
     network_mode: "host"
     ports:
       - "9090:9090"
@@ -33,6 +39,9 @@ services:
   grafana:
     container_name: grafana
     image: grafana/grafana:latest
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "0,1"
     network_mode: "host"
     ports:
       - "3000:3000"
@@ -59,84 +68,154 @@ services:
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
+  fibonacci-c-optimized:
+    build: ./fibonacci/c-optimized
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "1G"
+    mem_limit: "2G"
+
+
   fibonacci-cpp:
     build: ./fibonacci/cpp
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
+  fibonacci-cpp-optimized:
+    build: ./fibonacci/cpp-optimized
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "1G"
+    mem_limit: "2G"
+
+
   fibonacci-csharp:
     build: ./fibonacci/csharp
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
+  fibonacci-csharp-optimized:
+    build: ./fibonacci/csharp-optimized
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "1G"
+    mem_limit: "2G"
+
   fibonacci-go:
     build: ./fibonacci/go
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
-  fibonacci-java:
-    build: ./fibonacci/java
+  fibonacci-go-optimized:
+    build: ./fibonacci/go-optimized
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
-  fibonacci-lua:
-    build: ./fibonacci/lua
-    cpus: "2"
-    cpu_count: 2
-    cpuset: "2,3"
-    mem_reservation: "2G"
-    mem_limit: "2G"
+
   fibonacci-node:
     build: ./fibonacci/nodejs
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
-  fibonacci-perl:
-    build: ./fibonacci/perl
+  fibonacci-node-optimized:
+    build: ./fibonacci/nodejs-optimized
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
+
   fibonacci-python:
     build: ./fibonacci/python
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
-  fibonacci-ruby:
-    build: ./fibonacci/ruby
+  fibonacci-python-optimized:
+    build: ./fibonacci/python-optimized
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
+
   fibonacci-rust:
     build: ./fibonacci/rust
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
     mem_limit: "2G"
+  fibonacci-rust-optimized:
+    build: ./fibonacci/rust-optimized
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "1G"
+    mem_limit: "2G"
+
   fibonacci-scala:
     build: ./fibonacci/scala
     cpus: "2"
     cpu_count: 2
     cpuset: "2,3"
-    mem_reservation: "2G"
+    mem_reservation: "1G"
+    mem_limit: "2G"
+  fibonacci-scala-optimized:
+    build: ./fibonacci/scala-optimized
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "1G"
+    mem_limit: "2G"
+
+
+  fibonacci-java:
+    build: ./fibonacci/_java
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "1G"
+    mem_limit: "2G"
+
+  fibonacci-lua:
+    build: ./fibonacci/_lua
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "1G"
+    mem_limit: "2G"
+
+  fibonacci-perl:
+    build: ./fibonacci/_perl
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "1G"
+    mem_limit: "2G"
+
+  fibonacci-ruby:
+    build: ./fibonacci/_ruby
+    cpus: "2"
+    cpu_count: 2
+    cpuset: "2,3"
+    mem_reservation: "1G"
     mem_limit: "2G"
 #===============#
 # Fibonacci     #
